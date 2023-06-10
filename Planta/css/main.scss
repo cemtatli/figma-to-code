@@ -1,0 +1,734 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("_variable");
+
+$color-darkgreen: #172c17;
+$color-green: #224722;
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+::-webkit-scrollbar-track {
+  background: #e7edde;
+}
+::-webkit-scrollbar-thumb {
+  background: $color-green;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+@mixin h2-design {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  display: flex;
+  align-items: center;
+  color: $color-green;
+  margin-bottom: 1rem;
+}
+@mixin span-design {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  display: flex;
+  align-items: center;
+  color: $color-green;
+  margin-bottom: 3px;
+}
+@mixin p-design {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  display: flex;
+  align-items: center;
+  color: $color-green;
+  width: 500px;
+  margin-bottom: 1rem;
+}
+@mixin google-button {
+  width: 200px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d9e7cb;
+  border-radius: 9999px;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+@mixin apple-button {
+  width: 200px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d9e7cb;
+  border-radius: 9999px;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+$color-darkgreen: #172c17;
+$color-green: #224722;
+
+html {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4rem;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background: #e7edde;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 1515px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  .header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    .support {
+      font-size: 0.75rem;
+      line-height: 1.2rem;
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      color: $color-green;
+      &:hover {
+        text-decoration: underline;
+        transition: 0.3s ease-in-out;
+      }
+    }
+    .button {
+      width: 120px;
+      height: 34px;
+      border: 1px solid $color-green;
+      border-radius: 2rem;
+      font-size: 0.75rem;
+      line-height: 1.2rem;
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      color: $color-green;
+      text-align: center;
+      justify-content: center;
+      &:hover {
+        background-color: $color-green;
+        color: #fff;
+        transition: 0.4s all ease-in-out;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 6.5rem;
+    margin-bottom: 2rem;
+    .content-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 1;
+      justify-content: center;
+      align-items: flex-start;
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 5rem;
+        line-height: 5rem;
+        display: flex;
+        align-items: center;
+        color: $color-green;
+        width: 460px;
+      }
+      p {
+        @include p-design();
+      }
+      .buttons {
+        width: 100%;
+        gap: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .apple-button {
+          @include apple-button();
+          cursor: pointer;
+          &:hover {
+            border: 1px solid $color-green;
+            color: $color-green;
+            background-color: transparent;
+            transition: 0.3s all ease-in-out;
+          }
+          a {
+            font-family: "Inter";
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: $color-green;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .google-button {
+          @include google-button();
+          &:hover {
+            border: 1px solid $color-green;
+            color: $color-green;
+            background-color: transparent;
+            transition: 0.3s all ease-in-out;
+          }
+          a {
+            font-family: "Inter";
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: $color-green;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    .content-right {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+  .content-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 6.5rem;
+    margin-bottom: 2rem;
+    .content-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 1;
+      justify-content: center;
+      align-items: flex-start;
+      img {
+        border-radius: 0px 0px 15rem 0px;
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+    .content-right {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      span {
+        @include span-design();
+      }
+      h2 {
+        @include h2-design();
+        width: 400px;
+      }
+      p {
+        @include p-design();
+      }
+      .button {
+        background: $color-green;
+        border-radius: 9999px;
+        height: 56px;
+        width: 175px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 1.4rem;
+        color: #e0ffc0;
+        &:hover {
+          border: 1px solid #224722;
+          color: #224722;
+          background-color: transparent;
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+  }
+  .content-3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+    margin-bottom: 2rem;
+    .content-left {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      span {
+        @include span-design();
+      }
+      h2 {
+        @include h2-design();
+        width: 400px;
+      }
+      p {
+        @include p-design();
+      }
+      .button {
+        background: $color-green;
+        border-radius: 9999px;
+        height: 56px;
+        width: 175px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 1.4rem;
+        color: #e0ffc0;
+        &:hover {
+          border: 1px solid #224722;
+          color: #224722;
+          background-color: transparent;
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+    .content-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 1;
+      justify-content: center;
+      align-items: flex-start;
+      img {
+        border-radius: 50%;
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+  }
+  .content-4 {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+    margin-bottom: 2rem;
+    .content-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 1;
+      justify-content: center;
+      align-items: flex-start;
+      img {
+        border-radius: 0px 305px 305px 0px;
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+    .content-right {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      span {
+        @include span-design();
+      }
+      h2 {
+        @include h2-design();
+      }
+      p {
+        @include p-design();
+      }
+      .button {
+        background: $color-green;
+        border-radius: 9999px;
+        height: 56px;
+        width: 175px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 1.4rem;
+        color: #e0ffc0;
+        &:hover {
+          border: 1px solid $color-green;
+          color: $color-green;
+          background-color: transparent;
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+  }
+  .content-5 {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+    margin-bottom: 2rem;
+    .content-left {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      span {
+        @include span-design();
+      }
+      h2 {
+        @include h2-design();
+      }
+      p {
+        @include p-design();
+      }
+      .button {
+        background: $color-green;
+        border-radius: 9999px;
+        height: 56px;
+        width: 175px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 1.4rem;
+        color: #e0ffc0;
+        &:hover {
+          border: 1px solid $color-green;
+          color: $color-green;
+          background-color: transparent;
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+    .content-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 1;
+      justify-content: center;
+      align-items: flex-start;
+      img {
+        border-radius: 6rem;
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+    .content-left {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      span {
+        @include span-design();
+      }
+      h2 {
+        @include h2-design();
+      }
+      p {
+        @include p-design();
+      }
+      .button {
+        background: $color-green;
+        border-radius: 9999px;
+        height: 56px;
+        width: 175px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 1.4rem;
+        color: #e0ffc0;
+        &:hover {
+          border: 1px solid $color-green;
+          color: $color-green;
+          background-color: transparent;
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+  }
+  .comment-container {
+    height: 580px;
+    width: 100%;
+    padding: 2.5rem 5rem;
+    margin-bottom: 2rem;
+    .comment-card {
+      height: 556px;
+      h2 {
+        @include h2-design();
+        justify-content: center;
+      }
+      .buttons {
+        width: 100%;
+        height: 125px;
+        gap: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .apple-button {
+          @include apple-button();
+          &:hover {
+            border: 1px solid $color-green;
+            color: $color-green;
+            background-color: transparent;
+            transition: 0.3s all ease-in-out;
+          }
+          a {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: #224722;
+            align-items: center;
+            justify-content: center;
+          }
+          span {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #224722;
+          }
+          img {
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .google-button {
+          @include google-button();
+          &:hover {
+            border: 1px solid #224722;
+            color: #224722;
+            background-color: transparent;
+            transition: 0.3s all ease-in-out;
+          }
+          a {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: #224722;
+            align-items: center;
+            justify-content: center;
+          }
+          span {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #224722;
+          }
+          img {
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      .card {
+        gap: 3rem;
+        background: #fff;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 20px;
+        align-items: flex-start;
+        padding: 2rem;
+        .card-heading {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.2rem;
+          line-height: 2rem;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          color: $color-green;
+        }
+        .card-comment {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 0.9rem;
+          line-height: 1.5rem;
+          display: flex;
+          color: $color-green;
+        }
+
+        .author {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 0.75rem;
+          line-height: 1.2rem;
+          display: flex;
+          color: #224722;
+          display: flex;
+        }
+        .star {
+          display: flex;
+          li {
+            list-style-image: url(../images/star.svg);
+          }
+        }
+      }
+    }
+  }
+  .gallery {
+    margin-bottom: 8rem;
+    h2 {
+      @include h2-design();
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .photos {
+      width: 1100px;
+      height: 550px;
+      display: flex;
+      margin: auto;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      .gallery-1 {
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s all ease-in-out;
+        }
+        img {
+          border-radius: 0px 0px 250px 0px;
+        }
+      }
+      .gallery-2 {
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s all ease-in-out;
+        }
+        img {
+          border-radius: 311px;
+        }
+      }
+      .gallery-3 {
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s all ease-in-out;
+        }
+        img {
+          border-radius: 40px 40px 40px 0px;
+        }
+      }
+      .gallery-4 {
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s all ease-in-out;
+        }
+        img {
+          border-radius: 0px 200px;
+        }
+      }
+      .gallery-5 {
+        &:hover {
+          transform: scale(1.15);
+          transition: 0.3s all ease-in-out;
+        }
+        img {
+          border-radius: 0px 0px 200px 0px;
+        }
+      }
+    }
+  }
+}
+.footer {
+  background: $color-darkgreen;
+  height: 500px;
+  .footer-container {
+    width: 1515px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    .footer-top {
+      width: 100%;
+      justify-content: space-between;
+      display: flex;
+      .menu {
+        ul {
+          display: flex;
+          flex-direction: column;
+          li {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            a {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 40px;
+              display: flex;
+              align-items: center;
+              color: #7c956b;
+              &:hover {
+                color: #e0ffc0;
+                transition: 0.3s all ease-in-out;
+              }
+            }
+            .active {
+              color: #e0ffc0;
+            }
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      a {
+        cursor: pointer;
+      }
+      span {
+        @include span-design();
+        color: #e0ffc0;
+      }
+    }
+  }
+}
